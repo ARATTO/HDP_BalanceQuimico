@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+div {
+  -webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+label
+{
+	font-size: 90%;
+	/*font-size: 0.5em;*/
+}
+
+
+ul
+{
+	
+	margin:0; 
+	padding:0;
+}
+
+li
+{
+	list-style:none;
+}
+
+/*
+input.text
+{
+	size:10px;
+}*/
+
+input[type="text"], input[type="number"]
+{
+	width:40%;
+	text-align:center;
+}
+/*
+h1
+{
+	font-size: 200%;
+}
+*/
+h2
+{
+	font-size: 170%;
+}
+
+h3
+{
+	font-size: 130%;
+}
+
+h4
+{
+	font-size: 90%;
+}
+
+canvas
+{
+	/*background-color:#000;*/
+	background-color:#114454;
+	position:relative;
+	top:1%;
+	
+	height:98%;
+	width:98%;
+}
+
+
+
+
+
+#mediana
+{
+	font-size: 100%;
+}
+
+
+#labelPro
+{
+	font-size:100%;
+}
+
+
+#super
+{
+	background-color:#114454;
+	border: #99FF99 2px solid; 
+	position:absolute;
+	color:#94BF6E;
+	margin:1%;
+	text-align:center;
+	float:left;
+	top:9%;
+	height:86%;
+	/*min-heigh:80%;*/
+	/*max-height:86%;*/
+}
+
+#sub
+{
+	margin:2%;
+	border: #99FF99 2px solid; 
+	position:relative;
+	text-align:center;
+
+}
+
+#sub_salida
+{
+	margin-left:20%;
+	margin-right:5%;
+/*	border: #99FF99 3px solid; */
+	position:relative;
+	text-align:left;
+}
+
+.centrar_en_div
+{
+	vertical-align:middle;
+	top:40%;
+	position:absolute;
+	float:right;
+}
+
+
+
+.btn_calcular_n
+{
+	height:10%;
+	width:100%;
+	text-align:center;
+	vertical-align:middle;
+	float:inherit;
+	color:#114454;
+	border:none; 
+	
+	
+}
+
+.btn_calcular_i
+{
+	height:90%;
+	width:100%;
+	text-align:center;
+	/*vertical-align:middle;*/
+	float:inherit;
+	color:#114454;
+	border:none; 
+	left:110%;
+
+
+}
+
+#btn_guardar
+{
+	position: absolute;
+	top: 5%;
+	left: 90%;
+}
+
+#btn_regresar
+{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+
+
+header
+{
+	background-color:#0E3142;
+	color:#3B8D61;
+	height:10%;
+	width: 100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	text-align:center;
+}
+
+body
+{
+	background-color:#165751;
+	color:#99FF99;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:100%;
+	width:100%;
+}
+
+
+.A
+{
+	width:40%;
+	/*height:87%;      47 */
+}
+
+.A1
+{
+	float:left;
+/*	font-size: 170%;*/
+}
+
+.A2
+{
+	float:right;
+}
+.B
+{
+	float:left;
+	width:30%;
+	margin:1%;
+}
+
+.B1
+{
+	width:90%;
+	border:none;
+}
+
+.C
+{
+	float:right;
+	width:60%;
+	margin:1%;
+}
+
+.C1
+{
+	float:left;
+	width:43%;
+
+}
+
+.C2
+{
+	float:right;
+	width:43%;
+}
+
+
+
+.D
+{
+	width:25%;
+	left:69%;
+	/*height:86%;*/
+}
+
+
+.D2
+{
+	float:left;
+}
+.D3
+{
+	float:right;
+	/*position:inherit;
+	top:0px;*/
+}
+
+
+.F
+{
+	float:right;
+	width:97%;
+}
+
+.F1
+{
+	float:left;
+	width:43%;
+
+}
+
+.F2
+{
+	float:right;
+	width:43%;
+}
+
+
+.G
+{
+	width:4%;
+	min-height:86%;
+	max-height:80%;
+	top:9%;
+	left:94.7%;
+	/*height:87%;*/
+}
+
+.H
+{
+	width:28%;
+	left:40.5%;
+	/*height:87%;*/
+}
+
+.H1
+{
+	height:90%;
+	width:80%;
+	alignment-adjust:central;
+}
+
+.X
+{
+	float:right;
+	width:96%;
+}

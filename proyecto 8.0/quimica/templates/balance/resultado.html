@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Destilador</title>
+
+<!-- CSS -->
+<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="{{STATIC_URL}}css/animate.css" rel="stylesheet">
+<link href="{{STATIC_URL}}css/resultado_css.css" rel="stylesheet" type="text/css">
+
+<!-- JS -->
+<script src="{{STATIC_URL}}js/jquery.min.js"></script>
+<script src="{{STATIC_URL}}js/resultado.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+<header>
+	<h1><b>BALANCE DE MATERIA</b></h1>
+</header>
+
+
+
+<div class="animated A fadeInRightBig" class="A" id="super">
+	
+    <div class="centrar_en_div">
+        <a href="http://127.0.0.1:8000/">	
+                <img src="{{STATIC_URL}}img/boton1.png" width="40" height="80" alt="">
+        </a>
+    </div>
+</div>
+
+
+
+<div class="animated B fadeInRightBig" class="B" id="super" id="grafico">
+	
+		<label>ENTRADA</label>
+        
+        
+        <div id="container">
+
+
+  <canvas id="chart1" width="300" height="300"></canvas>
+
+  <table id="chartData1" >
+
+    <tr>
+      <th>NOMBRE</th><th>FLUJO (%)</th>
+     </tr>
+
+   <form class="navbar-form navbar-right" role="search" action="/">
+         <!--<select name="componente" class="form-control">-->
+              {% for d in componentes %}
+                   {% if d.flujo_id == ultimo %}
+
+                   
+
+
+                    <tr style="color: #54B5BF">
+                    <td>{{d.nombre}}</td><td>{{d.porcentajeFlujo}}</td>
+                    </tr>
+
+                    
+
+                    
+                   {%endif%}
+              {% endfor %}
+
+  </table>
+
+</div>
+
+	<script>
+		pieChart('chart1', '#chartData1 td', '#chart1');
+    </script>
+        
+</div>
+    
+<div class="animated C fadeInRightBig" class="C" id="super">
+		
+        <label>SALIDA</label>
+        
+        
+        <div id="container">
+
+
+  <canvas id="chart" width="300" height="300"></canvas>
+
+  <table id="chartData" >
+
+    <tr>
+      <th>NOMBRE</th><th>DESTILADO (%)</th>
+     </tr>
+
+
+     <form class="navbar-form navbar-right" role="search" action="/">
+         <!--<select name="componente" class="form-control">-->
+              {% for d in componentes %}
+                   {% if d.flujo_id == ultimo %}
+
+                   
+
+
+                    <tr style="color: #3B7FD9">
+                    <td>{{d.nombre}}</td><td>{{d.requerimientoDestilado}}</td>
+                    </tr>
+
+                    
+
+                    
+                   {%endif%}
+              {% endfor %}
+
+    
+  </table>
+
+</div>
+
+
+
+	<script>
+		pieChart('chart', '#chartData td', '#chart');
+    </script>
+</div>
+    
+<div class="animated D fadeInRightBig" class="D" id="super">
+		
+        <label>RESIDUO</label>
+        
+        <div id="container">
+
+
+  <canvas id="chart2" width="300" height="300"></canvas>
+
+  <table id="chartData2" >
+
+    <tr>
+      <th>NOMBRE</th><th>RESIDUO (%)</th>
+     </tr>
+
+     <form class="navbar-form navbar-right" role="search" action="/">
+         <!--<select name="componente" class="form-control">-->
+              {% for d in componentes %}
+                   {% if d.flujo_id == ultimo %}
+
+                   
+
+
+                    <tr style="color: #516B8D">
+                    <td>{{d.nombre}}</td><td>{{d.requerimientoResiduo}}</td>
+                    </tr>
+
+                    
+
+                    
+                   {%endif%}
+              {% endfor %}
+
+    
+  </table>
+
+</div>
+
+
+
+	<script>
+		pieChart('chart2', '#chartData2 td', '#chart2');
+    </script>
+    
+</div>
+
+<div class="animated E fadeInRightBig" class="E" id="super">
+		
+        <label>Ultimos Calculos</label>
+	 
+
+	 </form>
+
+</div>
+
+
+
+
+</body>
+</html>

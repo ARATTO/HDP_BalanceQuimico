@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Destilador</title>
+
+<!--IMPORTACIONES Y LIBRERIAS -->
+
+<!--CSS -->
+<link href="{{STATIC_URL}}css/animate.css" rel="stylesheet">
+<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet" >
+<link href="{{STATIC_URL}}css/index_css.css" rel="stylesheet" type="text/css">
+
+<!--JavaScript -->
+<script src="{{STATIC_URL}}js/jquery.min.js"></script>
+<script src="{{STATIC_URL}}js/index.js"></script>
+
+<!--IMPORTACIONES Y LIBRERIAS -->
+
+</head>
+
+
+
+<body>
+
+
+
+
+<header>
+
+	<h1><b>BALANCE DE MATERIA</b></h1>
+
+	  
+
+</header>
+
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="animated A fadeInLeftBig"  class="A"  id="super" >
+
+	<div  id="sub">
+		<div   class="A1">
+    		<label><b>ENTRADAS</b></label>
+	    </div>
+    	<div   class="A2">
+	       <label>FLUJO DE ENTRADA</label>
+	       <input type="text" value="0.0" id="cantidad" name="cantidad"/> 
+	       <label>mol/h</label>
+	    </div>
+    </div>
+    
+    <div class="X" id="sub">
+            <div class="B" id="sub">
+                <br>
+                <b><label>Nº Variables </label></b>
+                
+                <input name="numeroComponentes" type="number" id="numeroComponentes" value="" />
+                <br>
+                <div class="B1" id="sub">
+                            <br>
+                            <label><b>VARIABLES</b></label>
+                            <br>
+                            
+                            <ul class="conjunto1">
+							
+                                
+                            
+                            </ul>
+                </div>
+    
+    		</div>
+    
+            <div class="C" id="sub">
+                <br>
+                <center><b><label>REQUERIMIENTOS DE SALIDA</label></b></center>
+        
+                <div class="C1" id="sub">
+                      <br>
+                      <b><label>DESTILADO</label></b>
+                      <br>
+                      <ul class="conjunto2">
+							
+                                
+                            
+                      </ul> 
+                </div>
+                
+                <div class="C2" id="sub">
+                      <br>
+                      <b><label>RESIDUO</label></b>
+                      <br>
+                      <ul class="conjunto3">
+                      
+                      
+                      
+                      </ul>      
+                </div>
+            </div>
+    </div>
+    
+    <br>
+    
+    <div class="btn_calcular_n">
+        	<strong>
+	    		<input type="button" class="btn-success" id="calNormal" value="CALCULAR NORMAL"/>
+            </strong>
+            <br>
+            <br>
+    </div>
+</div>
+
+
+
+<div class="animated H fadeInLeftBig" class="H" id="super">
+			
+            
+   <canvas id="miCanvas">
+   
+   		
+   
+   
+   <img class="H1" src="{{STATIC_URL}}img/prueba3.png" >
+   </canvas>
+  
+   
+
+</div>
+
+<div class="animated D fadeInLeftBig"  class="D"  id="super" >
+
+	<div id="sub">
+    		<label><center><b>SALIDAS</b></center></label>
+    	<br>
+    </div>
+    
+    <div class="F" id="sub">
+    	
+        <div class="F1" id="sub">
+        	  <br>
+        	  <b><label>DESTILADO</label></b>
+              <br>
+                 <input size="10" type="text" value="0.0" id="cantidadDestilado" name="cantidadDestilado"/> 
+		         <label>mol/h</label>
+ 			  <br>
+              <br>
+              <ul class="conjunto4">
+              
+              
+              </ul>
+        </div>
+        
+        <div class="F2" id="sub">
+        	  <br>
+              <b><label>RESIDUO</label></b>
+               <br>
+                 <input size="10" type="text" value="0.0" id="cantidadResiduo" name="cantidadResiduo"/> 
+		         <label>mol/h</label>
+			  <br>
+              <br>
+              <ul class="conjunto5">
+              
+              
+              </ul>    
+        </div>
+    </div>
+    
+    <div class="btn_calcular_i" >
+		<br>
+	        <strong>
+		    	<input type="button" class="btn-success" id="calInverso" value="CALCULAR INVERSO"/>
+            </strong>
+		<br>
+        <br>
+    </div>
+</div>
+
+
+<div class="animated G fadeInLeftBig" class="G" id="super">
+	<div class="centrar_en_div">
+        <a href="resultado.html">
+                <img src="{{STATIC_URL}}img/boton2.png" width="40" height="80" alt="">
+        </a>
+    </div>
+
+</div>
+
+    <div>
+          <strong>
+             <input type="submit" class="btn-danger" id="btn_guardar" value="GUARDAR"/>
+          </strong> 
+    </div>
+
+    <div>
+          <strong>
+              <a href="AQUI DEBERIA IR EL LINK a donde debe ir">
+                  <input type="button" class="btn-danger" id="btn_regresar" value="REGRESAR"/>
+              </a>
+          </strong> 
+    </div>
+    
+
+</div>
+
+</form>
+
+</body>
+
+</html>
